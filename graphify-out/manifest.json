@@ -1,0 +1,67 @@
+{
+  ".eslintrc.json": {
+    "mtime": 1784325284.0,
+    "ast_hash": "9b8be5ef96ddd69ecd1ddc1554c61a88",
+    "semantic_hash": "9b8be5ef96ddd69ecd1ddc1554c61a88"
+  },
+  "next-env.d.ts": {
+    "mtime": 1784325284.0,
+    "ast_hash": "3cf36e94213e85dc306ec5f3f3760ecc",
+    "semantic_hash": "3cf36e94213e85dc306ec5f3f3760ecc"
+  },
+  "next.config.js": {
+    "mtime": 1784325284.0,
+    "ast_hash": "24a29476b7ed9f6c286d78e728803742",
+    "semantic_hash": "24a29476b7ed9f6c286d78e728803742"
+  },
+  "package.json": {
+    "mtime": 1784325284.0,
+    "ast_hash": "d349562c148be9ba941bb95af37b45d4",
+    "semantic_hash": "d349562c148be9ba941bb95af37b45d4"
+  },
+  "pages/[[...catchall]].tsx": {
+    "mtime": 1784325284.0,
+    "ast_hash": "eacc137e15d0633019b10bede841e177",
+    "semantic_hash": "eacc137e15d0633019b10bede841e177"
+  },
+  "pages/api/hello.ts": {
+    "mtime": 1784325284.0,
+    "ast_hash": "a546ee6e68d199da5565dc561f68d7be",
+    "semantic_hash": "a546ee6e68d199da5565dc561f68d7be"
+  },
+  "pages/plasmic-host.tsx": {
+    "mtime": 1784325284.0,
+    "ast_hash": "acac306bce76e15bced42ff5fbb8b3e5",
+    "semantic_hash": "acac306bce76e15bced42ff5fbb8b3e5"
+  },
+  "plasmic-init.ts": {
+    "mtime": 1784325284.0,
+    "ast_hash": "35b2c0be0f1866d880bebba2bf0a28fa",
+    "semantic_hash": "35b2c0be0f1866d880bebba2bf0a28fa"
+  },
+  "tsconfig.json": {
+    "mtime": 1784325284.0,
+    "ast_hash": "e12a9c19a5a67ade985cd743872fb20c",
+    "semantic_hash": "e12a9c19a5a67ade985cd743872fb20c"
+  },
+  ".github/workflows/plasmic-push.yml": {
+    "mtime": 1784325284.0,
+    "ast_hash": "6aadf40d829c6622887f3e2207da5bff",
+    "semantic_hash": "6aadf40d829c6622887f3e2207da5bff"
+  },
+  ".github/workflows/plasmic.yml": {
+    "mtime": 1784325284.0,
+    "ast_hash": "7ad63574ef8b454c54f2bdddbd96e3bb",
+    "semantic_hash": "7ad63574ef8b454c54f2bdddbd96e3bb"
+  },
+  "README.md": {
+    "mtime": 1784325284.0,
+    "ast_hash": "780d4419b185ec7f73f21b22aae93674",
+    "semantic_hash": "780d4419b185ec7f73f21b22aae93674"
+  },
+  "public/vercel.svg": {
+    "mtime": 1784325284.0,
+    "ast_hash": "4b4f1876502eb6721764637fe5c41702",
+    "semantic_hash": "4b4f1876502eb6721764637fe5c41702"
+  }
+}

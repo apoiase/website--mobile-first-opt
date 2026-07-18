@@ -1,0 +1,210 @@
+{
+ "version": "1.0.0",
+ "project": {
+  "name": "website--mobile-first-opt",
+  "languages": [
+   "typescript",
+   "css",
+   "json"
+  ],
+  "frameworks": [
+   "Next.js 12",
+   "React 18",
+   "Plasmic (@plasmicapp/loader-nextjs)"
+  ],
+  "description": "Front estático Next.js gerado por 'create-plasmic-app', usado como app-host para o projeto Plasmic 'Copy of apoiase--home' (visual builder no-code). Todo o conteúdo de página real vive no Plasmic Studio remoto; o repo é só o esqueleto de hosting + integração (catch-all router, host page) e os workflows que sincronizam/publicam a partir do Plasmic e fazem deploy em GitHub Pages.",
+  "analyzedAt": "2026-07-18T19:12:40Z",
+  "gitCommitHash": "1bf02bc55d484c77c4e2d9dfe4d7c4863e1a5903"
+ },
+ "nodes": [
+  {
+   "id": "file:plasmic-init.ts",
+   "type": "file",
+   "name": "plasmic-init.ts",
+   "filePath": "plasmic-init.ts",
+   "summary": "Inicializa o PlasmicLoader com o project id 'apoiase--home' (id 3f38a6Y6BqwkUbTMSSJTn1) e um API token de projeto embutido no código (loader/publishable token do Plasmic — ver PRC security). preview:false usa a última versão publicada.",
+   "tags": ["plasmic", "config", "entry-point"],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:pages/[[...catchall]].tsx",
+   "type": "file",
+   "name": "[[...catchall]].tsx",
+   "filePath": "pages/[[...catchall]].tsx",
+   "summary": "Catch-all route Next.js: busca a página Plasmic correspondente ao path via PLASMIC.maybeFetchComponentData, renderiza com PlasmicRootProvider/PlasmicComponent, ou 404 se não houver match. getStaticPaths lista todas as páginas publicadas no Plasmic (ISR, revalidate 60s).",
+   "tags": ["routing", "ssg", "plasmic"],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:pages/plasmic-host.tsx",
+   "type": "file",
+   "name": "plasmic-host.tsx",
+   "filePath": "pages/plasmic-host.tsx",
+   "summary": "Página /plasmic-host que carrega o PlasmicCanvasHost + preamble.js — é o endpoint que o Plasmic Studio usa como iframe de edição visual ao vivo.",
+   "tags": ["plasmic", "studio-integration"],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:pages/api/hello.ts",
+   "type": "file",
+   "name": "hello.ts",
+   "filePath": "pages/api/hello.ts",
+   "summary": "API route de exemplo do boilerplate create-next-app (retorna {name: 'John Doe'}) — não removida, sem uso funcional real.",
+   "tags": ["boilerplate", "unused"],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:next.config.js",
+   "type": "config",
+   "name": "next.config.js",
+   "filePath": "next.config.js",
+   "summary": "Config Next.js mínima (reactStrictMode: true, sem customização de build/rewrite).",
+   "tags": ["config"],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:package.json",
+   "type": "config",
+   "name": "package.json",
+   "filePath": "package.json",
+   "summary": "Manifest do app 'tmp-cpa' — nome herdado do boilerplate create-plasmic-app, nunca renomeado. Next 12.1.6, React 18.2.0, @plasmicapp/loader-nextjs 1.0.142.",
+   "tags": ["package-manifest"],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:tsconfig.json",
+   "type": "config",
+   "name": "tsconfig.json",
+   "filePath": "tsconfig.json",
+   "summary": "TS config padrão do create-next-app (target es5, strict, jsx preserve).",
+   "tags": ["config"],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:.eslintrc.json",
+   "type": "config",
+   "name": ".eslintrc.json",
+   "filePath": ".eslintrc.json",
+   "summary": "Extends next/core-web-vitals — lint padrão do Next.js.",
+   "tags": ["config", "lint"],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:styles/globals.css",
+   "type": "document",
+   "name": "globals.css",
+   "filePath": "styles/globals.css",
+   "summary": "Reset/estilos globais do boilerplate create-next-app, sem customização visível de marca.",
+   "tags": ["stylesheet"],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:styles/Home.module.css",
+   "type": "document",
+   "name": "Home.module.css",
+   "filePath": "styles/Home.module.css",
+   "summary": "CSS module do boilerplate (classes .container/.main) — não referenciado por nenhuma página ativa (a página home real vem do Plasmic, não de um componente local).",
+   "tags": ["stylesheet", "unused"],
+   "complexity": "simple"
+  },
+  {
+   "id": "pipeline:.github/workflows/plasmic.yml",
+   "type": "pipeline",
+   "name": "plasmic.yml",
+   "filePath": ".github/workflows/plasmic.yml",
+   "summary": "Workflow disparado por repository_dispatch do Plasmic Studio: inicializa/sincroniza o código gerado a partir do projeto Plasmic, builda e publica em GitHub Pages (branch gh-pages), abre PR se houver branch nova. Recebe project_api_token via payload do dispatch (não hardcoded aqui).",
+   "tags": ["ci-cd", "plasmic-sync"],
+   "complexity": "moderate"
+  },
+  {
+   "id": "pipeline:.github/workflows/plasmic-push.yml",
+   "type": "pipeline",
+   "name": "plasmic-push.yml",
+   "filePath": ".github/workflows/plasmic-push.yml",
+   "summary": "Workflow on push em main: builda o app Plasmic (skip_if_plasmic) e publica em GitHub Pages.",
+   "tags": ["ci-cd", "deploy"],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "README.md",
+   "summary": "README padrão do template create-plasmic-app — comandos yarn dev e links pra documentação do Plasmic, sem informação específica deste projeto.",
+   "tags": ["readme"],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {"source": "file:pages/[[...catchall]].tsx", "target": "file:plasmic-init.ts", "type": "imports", "direction": "forward", "weight": 0.9},
+  {"source": "file:pages/plasmic-host.tsx", "target": "file:plasmic-init.ts", "type": "imports", "direction": "forward", "weight": 0.9},
+  {"source": "pipeline:.github/workflows/plasmic-push.yml", "target": "config:package.json", "type": "builds", "direction": "forward", "weight": 0.7},
+  {"source": "pipeline:.github/workflows/plasmic.yml", "target": "file:plasmic-init.ts", "type": "regenerates", "direction": "forward", "weight": 0.6},
+  {"source": "document:README.md", "target": "config:package.json", "type": "documents", "direction": "forward", "weight": 0.5},
+  {"source": "document:styles/Home.module.css", "target": "file:pages/api/hello.ts", "type": "conceptually_related_to", "direction": "forward", "weight": 0.4}
+ ],
+ "layers": [
+  {
+   "id": "layer:plasmic-integration",
+   "name": "Integração Plasmic",
+   "description": "O núcleo real deste app-host: plasmic-init.ts configura o loader, [[...catchall]].tsx renderiza qualquer página publicada no Plasmic Studio, plasmic-host.tsx é o endpoint de edição visual ao vivo.",
+   "nodeIds": ["file:plasmic-init.ts", "file:pages/[[...catchall]].tsx", "file:pages/plasmic-host.tsx"]
+  },
+  {
+   "id": "layer:ci-cd",
+   "name": "Sincronização e deploy",
+   "description": "Dois workflows GitHub Actions: um disparado pelo Plasmic Studio (sync+build+PR), outro em push na main (build+publish em GitHub Pages).",
+   "nodeIds": ["pipeline:.github/workflows/plasmic.yml", "pipeline:.github/workflows/plasmic-push.yml"]
+  },
+  {
+   "id": "layer:boilerplate",
+   "name": "Boilerplate create-next-app não customizado",
+   "description": "Resíduos do template padrão (API route de exemplo, CSS module, nome do pacote 'tmp-cpa') que nunca foram adaptados ao projeto real.",
+   "nodeIds": ["file:pages/api/hello.ts", "document:styles/Home.module.css", "document:styles/globals.css"]
+  },
+  {
+   "id": "layer:config",
+   "name": "Configuração",
+   "description": "next.config.js, tsconfig.json, .eslintrc.json e package.json — todos no padrão gerado pelo create-plasmic-app, sem customização.",
+   "nodeIds": ["config:next.config.js", "config:package.json", "config:tsconfig.json", "config:.eslintrc.json"]
+  },
+  {
+   "id": "layer:documentation",
+   "name": "Documentação",
+   "description": "README genérico do template.",
+   "nodeIds": ["document:README.md"]
+  }
+ ],
+ "tour": [
+  {
+   "order": 1,
+   "title": "O que este repo é",
+   "description": "README.md e package.json (nome 'tmp-cpa', nunca renomeado) revelam a origem: um app gerado por 'create-plasmic-app' para hospedar o projeto Plasmic 'Copy of apoiase--home' (visto no último commit: '[plasmic] Sync project Copy of apoiase--home'). O conteúdo de página real não vive neste repo — vive no Plasmic Studio, um builder visual no-code hospedado externamente.",
+   "nodeIds": ["document:README.md", "config:package.json"]
+  },
+  {
+   "order": 2,
+   "title": "Como uma página Plasmic chega ao navegador",
+   "description": "pages/[[...catchall]].tsx é o único router: para qualquer path, chama PLASMIC.maybeFetchComponentData (via plasmic-init.ts) para buscar os dados da página publicada no Plasmic, e renderiza com PlasmicComponent. getStaticPaths pré-gera todos os paths conhecidos com ISR (revalidate: 60s).",
+   "nodeIds": ["file:pages/[[...catchall]].tsx", "file:plasmic-init.ts"]
+  },
+  {
+   "order": 3,
+   "title": "O token embutido em plasmic-init.ts",
+   "description": "plasmic-init.ts tem um project API token do Plasmic hardcoded no código-fonte. Pelos loaders do Plasmic, este é tipicamente um token de leitura/publicação (client-side, análogo a uma publishable key), não uma credencial administrativa — mas é um segredo pré-existente que merece registro e confirmação, não rotação as cegas (ver docs/prc/security/PRC.md SEC4).",
+   "nodeIds": ["file:plasmic-init.ts"]
+  },
+  {
+   "order": 4,
+   "title": "Dois caminhos de deploy",
+   "description": "plasmic.yml é disparado pelo próprio Plasmic Studio (repository_dispatch) quando alguém publica uma mudança lá — sincroniza código, builda e publica em GitHub Pages, abrindo PR se necessário. plasmic-push.yml roda em todo push na main como fallback/build padrão. Ambos publicam em GitHub Pages (branch gh-pages), não em infra AWS da Apoia.se.",
+   "nodeIds": ["pipeline:.github/workflows/plasmic.yml", "pipeline:.github/workflows/plasmic-push.yml"]
+  },
+  {
+   "order": 5,
+   "title": "O que nunca foi customizado",
+   "description": "pages/api/hello.ts (API de exemplo 'John Doe') e styles/Home.module.css são resíduos do boilerplate create-next-app — nenhuma página do projeto real os referencia, confirmando que o time nunca desenvolveu componentes React locais: tudo é editado visualmente no Plasmic Studio.",
+   "nodeIds": ["file:pages/api/hello.ts", "document:styles/Home.module.css"]
+  }
+ ]
+}
