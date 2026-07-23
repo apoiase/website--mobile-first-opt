@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       # gitleaks direto (redact mascara valores); consultivo: não falha o job.
@@ -38,7 +38,7 @@ jobs:
     container:
       image: semgrep/semgrep:1.169.0
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: semgrep
         continue-on-error: true
         run: semgrep scan --config p/typescript --config p/security-audit --metrics=off . || true
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: trivy
         continue-on-error: true
         run: |
