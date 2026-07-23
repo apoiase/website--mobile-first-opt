@@ -24,7 +24,7 @@ jobs:
         run: |
           docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:v8.30.1 \
             detect --source /repo --redact --no-banner --exit-code 0 --report-path /repo/gitleaks-report.json || true
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: gitleaks-report
