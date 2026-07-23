@@ -1,0 +1,262 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "1bf02bc55d484c77c4e2d9dfe4d7c4863e1a5903",
+  "generatedAt": "2026-07-18T19:13:44.665Z",
+  "files": {
+    "plasmic-init.ts": {
+      "filePath": "plasmic-init.ts",
+      "contentHash": "b1935eab904c0057f379ac0830ad08fd212c794db02afa615f212f2f208e694e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@plasmicapp/loader-nextjs",
+          "specifiers": [
+            "initPlasmicLoader"
+          ]
+        }
+      ],
+      "exports": [
+        "PLASMIC"
+      ],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    "pages/[[...catchall]].tsx": {
+      "filePath": "pages/[[...catchall]].tsx",
+      "contentHash": "c4eb2d7460a5772ac71008cb1e76cce3dfbdcf6289731c59343c31611b602587",
+      "functions": [
+        {
+          "name": "PlasmicLoaderPage",
+          "params": [
+            "props"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "getStaticProps",
+          "params": [
+            "context"
+          ],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "getStaticPaths",
+          "params": [],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "@plasmicapp/loader-nextjs",
+          "specifiers": [
+            "PlasmicComponent",
+            "extractPlasmicQueryData",
+            "ComponentRenderData",
+            "PlasmicRootProvider"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "GetStaticPaths",
+            "GetStaticProps"
+          ]
+        },
+        {
+          "source": "next/error",
+          "specifiers": [
+            "Error"
+          ]
+        },
+        {
+          "source": "../plasmic-init",
+          "specifiers": [
+            "PLASMIC"
+          ]
+        }
+      ],
+      "exports": [
+        "PlasmicLoaderPage",
+        "getStaticProps",
+        "getStaticPaths"
+      ],
+      "totalLines": 63,
+      "hasStructuralAnalysis": true
+    },
+    "pages/plasmic-host.tsx": {
+      "filePath": "pages/plasmic-host.tsx",
+      "contentHash": "d5ecd15c8320cf91e8aca33189d3d7b690d90fdb39bffa24a2533712f869d1bd",
+      "functions": [
+        {
+          "name": "PlasmicHost",
+          "params": [],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "next/script",
+          "specifiers": [
+            "Script"
+          ]
+        },
+        {
+          "source": "@plasmicapp/loader-nextjs",
+          "specifiers": [
+            "PlasmicCanvasHost"
+          ]
+        },
+        {
+          "source": "../plasmic-init",
+          "specifiers": [
+            "PLASMIC"
+          ]
+        }
+      ],
+      "exports": [
+        "PlasmicHost"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "pages/api/hello.ts": {
+      "filePath": "pages/api/hello.ts",
+      "contentHash": "b797b4e5661d8f3d477d2f41b134301f4e03629759b3f19ff6fec69b25a9392a",
+      "functions": [
+        {
+          "name": "handler",
+          "params": [
+            "req",
+            "res"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "NextApiRequest",
+            "NextApiResponse"
+          ]
+        }
+      ],
+      "exports": [
+        "handler"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "next.config.js": {
+      "filePath": "next.config.js",
+      "contentHash": "660f78af355945be56f482c9b697e4892d2ee7da261c8743e75a1c95d3c72c73",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "95259a803696f406004bee59bcc48e78ae9a4d59d8ef5a184a7b4b0c5a14d0ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    "tsconfig.json": {
+      "filePath": "tsconfig.json",
+      "contentHash": "ce8226483e5266244de7a0d0f0f109836e46f76a66fdc12cbd01e078af58931a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    ".eslintrc.json": {
+      "filePath": ".eslintrc.json",
+      "contentHash": "1589a15e55fbebc6519c95d91d8f0a090618f20dc78e479858b9c27552484961",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "styles/globals.css": {
+      "filePath": "styles/globals.css",
+      "contentHash": "43ad456f3c8dc2d2dab0104f1faa7750da48f93451bbfe9b57d75c1ed5c4ce5c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "styles/Home.module.css": {
+      "filePath": "styles/Home.module.css",
+      "contentHash": "3240205fdffa9ddeaae709f6b6a996116de5f23d6b0850f5dba04b984de94d95",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 117,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/plasmic.yml": {
+      "filePath": ".github/workflows/plasmic.yml",
+      "contentHash": "0c965efd8cdb9f888d3d2b8415595b2fbe76847c2cd637712bdefb1150adbce2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 86,
+      "hasStructuralAnalysis": true
+    },
+    ".github/workflows/plasmic-push.yml": {
+      "filePath": ".github/workflows/plasmic-push.yml",
+      "contentHash": "916f9a8a9c46ee864c12cadf62382f39d096563193b7766925db078405cdb05c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "8471f229df7321874c12884724827426ed2cf28dc0da6bd1a97e481e471d193e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    }
+  }
+}
